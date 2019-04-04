@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark">
 
-        <a class="navbar-brand" href="#">JohnShop</a>
+        <a class="navbar-brand" href="/">JohnShop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,8 +14,9 @@
                     <i class="fas fa-user-tag"></i> User Account
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">User Login</a>
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="{{route('users.Signup')}}">Sign up</a>
+                <a class="dropdown-item" href="{{route('users.Signin')}}">Sign in</a>
+                <a class="dropdown-item" href="{{route('users.logout')}}">Logout</a>
                
               </div>
             </li>
