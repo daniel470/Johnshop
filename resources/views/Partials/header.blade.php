@@ -1,13 +1,11 @@
 <nav class="navbar navbar-dark bg-dark">
 
         <a class="navbar-brand" href="/">JohnShop</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#"> <i class="fas fa-shopping-cart"></i> Shopping Cart <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{ route('product.shoppingcart') }}"> <i class="fas fa-shopping-cart"></i> Shopping Cart 
+                <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+              </a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
