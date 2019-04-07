@@ -14,9 +14,15 @@
                     <i class="fas fa-user-tag"></i> User Account
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                @if(Auth::check())
+                <a class="dropdown-item" href="{{route('users.profile')}}">User Profile</a>
+                <a class="dropdown-item" href="{{route('users.logout')}}">Logout</a>
+                @else
                 <a class="dropdown-item" href="{{route('users.Signup')}}">Sign up</a>
                 <a class="dropdown-item" href="{{route('users.Signin')}}">Sign in</a>
-                <a class="dropdown-item" href="{{route('users.logout')}}">Logout</a>
+                @endif
+ 
+               
                
               </div>
             </li>
