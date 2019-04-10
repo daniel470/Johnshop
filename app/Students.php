@@ -12,8 +12,9 @@ class students extends Model
 
 
 
-    public function students()
+   /* public function students()
     {
         return $this->hasMany('App\Order');
     }
+    */
 }

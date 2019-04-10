@@ -26,7 +26,7 @@
               </ul>
            </div>
         </div>
-        <h4>Social Media</h4>
-        Orders to be delivered- <a href="Johnshop.com">View Orders</a>
+        <h4>Order Check</h4>
+        Orders to be delivered- <a href="http://localhost/students">View Orders</a>
      </div>
 @endsection

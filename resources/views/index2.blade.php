@@ -50,7 +50,9 @@ input[type=submit]:hover {
 <h3>Students Request</h3>
 
 <div class="container">
-  <form action="{{ route('product.index1') }}">
+    
+  <form action="{{ route('product.index1') }}" method="post">
+      {{ csrf_field()}}
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="Fname" placeholder="Your name..">
 
@@ -58,20 +60,33 @@ input[type=submit]:hover {
 	<input type="text" id="lname" name="Lname" placeholder="Your last name..">
 	
 	<label for="lname">Enter ID number</label>
-    <input type="text" id="lname" name="students_id" placeholder="eg.. 1703254">
+    <input type="text" id="lD" name="ID#" placeholder="eg.. 1703254">
 
 	<label for="lname">Location on Campus</label>
-    <input type="text" id="lname" name="location" placeholder="eg Hall 1 upstairs">
+    <input type="text" id="locate" name="location" placeholder="eg Hall 1 upstairs">
 
     
 
     <label for="subject">Important Details</label>
-    <textarea id="subject" name="subject" placeholder="Write something for confidentiality" style="height:200px"></textarea>
+    <textarea id="subject" name="otherdetails" placeholder="Write something for confidentiality" style="height:200px"></textarea>
 
     <input type="submit" value="Submit">
   </form>
 </div>
 
-</body>
+<!--<table>
+      <tr>
+      <td>FirstName</td>
+      <td>LastName</td>
+      <td>ID</td>
+      <td>Location</td>
+      <td>OtherDetails</td>
+      </tr>
+    -->     
+
+
+ 
+</table>
+  </body>
 </html>
 @endsection

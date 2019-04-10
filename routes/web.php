@@ -21,6 +21,10 @@ Route::get('/students', function (){
 Route::get('/index2', function (){
     return view('index2');
 });
+Route::post('/index1',  'Controller@insert');
+
+Route::get('/index2','Controller@getData');
+
 Route::get('/addtocart/{id}',[
     'uses' => 'ProductController@getAddToCart',
     'as' => 'product.AddToCart'

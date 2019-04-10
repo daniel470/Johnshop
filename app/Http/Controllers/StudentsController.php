@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Students;
 class StudentsController extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class StudentsController extends Controller
     public function index()
     {
         $students = Student::all()->toArray();
-        return view('users.index2',compact('users') );
+        return view('users.students',compact('students') );
     }
 
     /**
@@ -24,7 +24,7 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('index2');
     }
 
     /**
@@ -35,7 +35,17 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       /* $FName = $request->input('Fname');
+        $LName = $request->input('Lname');
+        $ID1   = $request->input('ID#');
+        $location =$request->input('location');
+        $otherdetails =$request->input('otherdetails');
+
+        $data= array('Fname'=>$FName,"Lname"=>$LName, "ID#"=>$ID1, "location"=>$location, "otherdetail"=>$otherdetails);
+
+        DB::table('students')->insert($data);
+
+        echo "Success";*/
     }
 
     /**

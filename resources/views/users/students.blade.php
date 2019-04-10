@@ -47,31 +47,37 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h3>Students Request</h3>
-
-<div class="container">
-  <form action="{{ route('product.index1') }}">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-	<input type="text" id="lname" name="lastname" placeholder="Your last name..">
-	
-	<label for="lname">Enter ID number</label>
-    <input type="text" id="lname" name="ID#" placeholder="eg.. 1703254">
-
-	<label for="lname">Location on Campus</label>
-    <input type="text" id="lname" name="location" placeholder="eg Hall 1 upstairs">
-
-    
-
-    <label for="subject">Important Details</label>
-    <textarea id="subject" name="subject" placeholder="Write something for confidentiality" style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
+<h3>Students Orders</h3>
+<div class ="row">
+<div class="col-md-12">
+  <br/>
+  <table class="table table-borderd">
+    <tr>
+      <th> First Name </th>
+      <th> Last Name  </th>
+      <th> ID         </th>
+      <th> Location </th>
+      <th> Other Details</th>
+      <th> Delete       </th>
+    </tr> 
+    @foreach ($data as $value)
+     <tr>
+       <td> {{$row['Fname']}}</td>
+       <td> {{$row['Lname']}}</td>
+       <td> {{$row['ID#']}}</td> 
+       <td> {{$row['location']}}</td>  
+       <td> {{$row['otherdetails']}}</td>
+       <td></td>
+     </tr>
+    @endforeach
+  </table>
 </div>
+<?php if (!empty($Fname)) { ?>
 
+<?php echo $Fname; ?>  
+  <?php} ?>
+
+}
 </body>
 </html>
 @endsection
