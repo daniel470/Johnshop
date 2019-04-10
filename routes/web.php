@@ -14,9 +14,24 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/students', function (){
+           return view('users.students');
+});
+
+Route::get('/index2', function (){
+    return view('index2');
+});
 Route::get('/addtocart/{id}',[
     'uses' => 'ProductController@getAddToCart',
     'as' => 'product.AddToCart'
+]);
+Route::get('/reduce/{id}', [   
+    'uses' =>'ProductController@getReduceByOne',
+    'as'   => 'product.reduceByOne'
+]);
+Route::get('/remove/{id}',[
+    'uses' => 'ProductController@getRemoveItem',
+    'as' => 'product.remove'
 ]);
 Route::get('/shoppingcart',[
     'uses' => 'ProductController@getCart',

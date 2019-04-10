@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark">
 
-        <a class="navbar-brand" href="/">JohnShop</a>
+        <a class="navbar-brand" href="{{ route('product.index1') }}">JohnShop</a>
           <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link" href="{{ route('product.shoppingcart') }}"> <i class="fas fa-shopping-cart"></i> Shopping Cart 
@@ -31,6 +31,6 @@
           
             <h1 class="display-3">A Warm Welcome! To John Shop</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-            <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+            <a href="http://localhost/" class="btn btn-primary btn-lg">Back to Welcome Page!</a>
     </header>
       

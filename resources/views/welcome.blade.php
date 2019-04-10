@@ -14,7 +14,8 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                background-image: url("images/Bg.jpg");
+                color: #010606;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -22,7 +23,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 80vh;
             }
 
             .flex-center {
@@ -46,13 +47,13 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 100px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #187a6e;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 15px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -79,16 +80,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                    Welcome to
                     John-Shop
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Make an order</a>
+                    <a href="http://localhost/index2">Make an order</a>
                     <a href="https://laracasts.com">About Us </a>
-                    <a href="https://laravel-news.com">Contact </a>
+                    <a href="http://localhost/index1">Contact </a>
                     <a href="https://nova.laravel.com">Whats New</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="http://localhost/users/Signin"> Admin Sign In</a>
+                    <a href="http://localhost/users/Signin">Driver Login/Signup</a>
                 </div>
             </div>
         </div>
