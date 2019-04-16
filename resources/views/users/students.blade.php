@@ -49,6 +49,7 @@ input[type=submit]:hover {
 
 <h3>Students Orders</h3>
 <div class ="row">
+<div class ="data">
 <div class="col-md-12">
   <br/>
   <table class="table table-borderd">
@@ -60,7 +61,7 @@ input[type=submit]:hover {
       <th> Other Details</th>
       <th> Delete       </th>
     </tr> 
-    @foreach ($data as $value)
+    @foreach ($data as $row)
      <tr>
        <td> {{$row['Fname']}}</td>
        <td> {{$row['Lname']}}</td>
@@ -72,12 +73,8 @@ input[type=submit]:hover {
     @endforeach
   </table>
 </div>
-<?php if (!empty($Fname)) { ?>
-
-<?php echo $Fname; ?>  
-  <?php} ?>
-
-}
+</div>
+</div>
 </body>
 </html>
 @endsection

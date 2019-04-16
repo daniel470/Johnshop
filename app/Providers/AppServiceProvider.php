@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Contracts\Repos\IProductRepository;
+use App\Repos\Eloquent\ProductRepository;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -25,4 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+    public $singletons = [
+       IProductRepository ::class => ProductRepository::class,
+    ];
 }

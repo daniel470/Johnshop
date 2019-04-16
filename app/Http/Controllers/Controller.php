@@ -17,7 +17,11 @@ class Controller extends BaseController
     {
         $this->validate($request, [    
             'Fname' => 'required',
-            'Lname' => 'required'
+            'Lname' => 'required',
+            'location' => 'required',
+            'ID#' => 'required',
+            'otherdetails' => 'required'
+
         ]);
 
         $FName = $request->input('Fname');

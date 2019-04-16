@@ -9,9 +9,20 @@ use Stripe\Charge;
 use Stripe\Stripe;
 use App\Order;
 use Auth;
+use App\Contracts\Repos\IProductRepository;
 
 class ProductController extends Controller
 {
+    /**
+     * @instance of App\Contracts\Repos\IProductRepository
+     */
+    private $productRepo;
+
+    public function __construct(
+        IProductRepository $productRepo
+    ){
+        $this->$productRepo = $productRepo;
+    }
     public function getIndex()
     {
         $products = Product::all();
@@ -20,7 +31,7 @@ class ProductController extends Controller
 
     public function getAddToCart(Request $request ,$id)
     {
-        $product = Product::find($id);
+        $product = $this->productRepo->get($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart ($oldCart);
         $cart->add($product, $product->id);
